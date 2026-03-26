@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html data-wf-page="66179c84f47526726855698f" data-wf-site="66179c84f475267268556989" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <title>AP Biology Study Guide | CrossRoads Tutoring</title>
+  <meta content="Master AP Biology with our comprehensive and digestible study guide. Unit by unit breakdowns, FRQ strategies, and test tips." name="description">
+  <meta content="AP Biology Study Guide | CrossRoads Tutoring" property="og:title">
+  <meta content="Master AP Biology with our comprehensive and digestible study guide. Unit by unit breakdowns, FRQ strategies, and test tips." property="og:description">
+  <meta content="https://www.crossroadstutoring.com/Website-v.2.0/images/CoverPhoto-OpenGraph.png" property="og:image">
+  <meta content="AP Biology Study Guide | CrossRoads Tutoring" property="twitter:title">
+  <meta content="Master AP Biology with our comprehensive and digestible study guide. Unit by unit breakdowns, FRQ strategies, and test tips." property="twitter:description">
+  <meta content="https://www.crossroadstutoring.com/Website-v.2.0/images/CoverPhoto-OpenGraph.png" property="twitter:image">
+  <meta property="og:type" content="website">
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="../css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="../css/crossroadstutoring.webflow.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+  <script type="text/javascript">
+      WebFont.load({
+        google: {
+          families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic", "Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"]
+        }
+      });
+  </script>
+  <style>
+    :root {
+      --clr-purple: #5544af;
+      --clr-blue: #4f98ca;
+      --clr-yellow: #fcd34d;
+      --bg-color: #f0f4f8;
+      --text-main: #1f2937;
+      --text-muted: #4b5563;
+      --card-bg: rgba(255, 255, 255, 0.85);
+    }
+    
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      scroll-behavior: smooth;
+    }
+
+    /* Override Webflow's sticky nav behavior */
+    .navbar {
+      position: absolute !important;
+    }
+    .navigation {
+      position: relative !important;
+      z-index: 1000;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+    }
+
+    /* Premium Custom Hero */
+    .sg-hero {
+      position: relative;
+      background: linear-gradient(135deg, var(--clr-purple) 0%, var(--clr-blue) 100%);
+      padding: 140px 20px 100px;
+      text-align: center;
+      color: white;
+      overflow: hidden;
+      margin-bottom: 50px;
+    }
+    .sg-hero::after {
+      content: '';
+      position: absolute;
+      bottom: -40px; left: 0; right: 0;
+      height: 80px;
+      background: var(--bg-color);
+      transform: skewY(-2deg);
+      z-index: 1;
+    }
+    .sg-hero h1 {
+      font-size: 3.5rem;
+      font-weight: 900;
+      margin-bottom: 24px;
+      letter-spacing: -1px;
+      position: relative;
+      z-index: 2;
+      text-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .sg-hero p {
+      font-size: 1.25rem;
+      max-width: 650px;
+      margin: 0 auto;
+      opacity: 0.95;
+      position: relative;
+      z-index: 2;
+      line-height: 1.6;
+    }
+
+    /* Layout */
+    .sg-container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 20px 80px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 50px;
+      align-items: start;
+    }
+
+    @media (max-width: 991px) {
+      .sg-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Sticky Sidebar */
+    .sg-sidebar {
+      position: sticky;
+      top: 40px; 
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.6);
+      border-radius: 24px;
+      padding: 30px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.04);
+    }
+    .sg-sidebar h3 {
+      font-size: 1.15rem;
+      margin-bottom: 20px;
+      color: var(--clr-purple);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 800;
+    }
+    .sg-sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      max-height: calc(100vh - 200px);
+      overflow-y: auto;
+    }
+    .sg-sidebar ul::-webkit-scrollbar {
+      width: 6px;
+    }
+    .sg-sidebar ul::-webkit-scrollbar-thumb {
+      background: rgba(0,0,0,0.1);
+      border-radius: 3px;
+    }
+    .sg-sidebar a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 10px 16px;
+      border-radius: 12px;
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      display: block;
+    }
+    .sg-sidebar a:hover {
+      background: rgba(85, 68, 175, 0.08); /* light purple */
+      color: var(--clr-purple);
+      transform: translateX(6px);
+    }
+    .sg-sidebar .divider {
+      height: 1px;
+      background: rgba(0,0,0,0.08);
+      margin: 15px 0;
+    }
+
+    /* Content Area */
+    .sg-content {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .sg-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.8);
+      border-radius: 24px;
+      padding: 50px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.03);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+      scroll-margin-top: 100px;
+    }
+    .sg-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 60px rgba(0,0,0,0.08);
+    }
+    
+    @media (max-width: 767px) {
+      .sg-card { padding: 30px; }
+    }
+
+    /* Decoration Accents */
+    .sg-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 8px;
+    }
+    .sg-card.yellow::before { background: var(--clr-yellow); }
+    .sg-card.blue::before { background: var(--clr-blue); }
+    .sg-card.purple::before { background: var(--clr-purple); }
+
+    .sg-card h2 {
+      font-size: 2.25rem;
+      color: var(--text-main);
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-weight: 800;
+    }
+    .sg-card h2 span.unit-badge {
+      font-size: 0.85rem;
+      padding: 6px 14px;
+      border-radius: 20px;
+      color: white;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .sg-card.yellow h2 span.unit-badge { background: var(--clr-yellow); color: #854d0e; }
+    .sg-card.blue h2 span.unit-badge { background: var(--clr-blue); }
+    .sg-card.purple h2 span.unit-badge { background: var(--clr-purple); }
+
+    .sg-card ul {
+      margin: 0;
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .sg-card li {
+      line-height: 1.8;
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      position: relative;
+    }
+    .sg-card li::marker {
+      color: var(--clr-blue);
+      font-size: 1.25rem;
+    }
+    .sg-card.purple li::marker { color: var(--clr-purple); }
+    .sg-card.yellow li::marker { color: var(--clr-yellow); }
+
+    .sg-card li strong {
+      color: var(--text-main);
+      font-weight: 800;
+    }
+
+    /* Subsection within tips */
+    .sg-tips-section {
+      margin-top: 40px;
+      padding-top: 30px;
+      border-top: 2px dashed rgba(0,0,0,0.08);
+    }
+    .sg-tips-section h3 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+    .sg-tips-section.yellow h3 { color: #854d0e; }
+    .sg-tips-section.blue h3 { color: var(--clr-blue); }
+    .sg-tips-section.purple h3 { color: var(--clr-purple); }
+    
+    .construction-notice {
+        font-style: italic;
+        color: var(--text-muted);
+        opacity: 0.7;
+    }
+  </style>
+  <link href="../images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="../images/webclip.png" rel="apple-touch-icon">
+</head>
+<body class="body">
+
+  <section class="navigation">
+    <div data-animation="default" class="navbar w-nav" data-easing2="ease-in-out-quad" data-easing="ease-in-out-quad" data-collapse="medium" role="banner" data-duration="600" data-doc-height="1">
+      <a href="../index.html" class="brand w-nav-brand" target="_blank"><img src="../images/crossroads-icon-only-1.svg" loading="lazy" width="248" alt="CrossRoads Tutoring"></a>
+      <nav role="navigation" class="nav-menu w-nav-menu">
+        <div class="corner-blob-wrapper"><img src="../images/621dfcd10187caf50f94dcc7_section_blob4.svg" loading="lazy" width="17" alt="" class="corner-blob nav-link-blob nav-bar-blob">
+          <a href="../index.html#Home" class="nav-link w-nav-link" target="_blank">Home</a>
+        </div>
+        <div class="corner-blob-wrapper"><img src="../images/621dfcd10187caf50f94dcc7_section_blob4.svg" loading="lazy" width="17" alt="" class="corner-blob nav-link-blob nav-bar-blob">
+          <a href="../index.html#Team" class="nav-link w-nav-link" target="_blank">Team</a>
+        </div>
+        <div class="corner-blob-wrapper"><img src="../images/621dfcd10187caf50f94dcc7_section_blob4.svg" loading="lazy" width="17" alt="" class="corner-blob nav-link-blob nav-bar-blob">
+          <a href="../index.html#Subjects" class="nav-link w-nav-link" target="_blank">Subjects</a>
+        </div>
+        <div class="corner-blob-wrapper"><img src="../images/621dfcd10187caf50f94dcc7_section_blob4.svg" loading="lazy" width="17" alt="" class="corner-blob nav-link-blob nav-bar-blob">
+          <a href="#Contact" class="nav-link w-nav-link">Contact</a>
+        </div>
+        <a href="tel:18582165827" class="button w-button">Call Us At 858-216-5827</a>
+      </nav>
+      <div class="menu-button w-nav-button">
+        <div class="icon w-icon-nav-menu"></div>
+      </div>
+    </div>
+  </section>
+
+  <header class="sg-hero">
+    <h1>AP Biology</h1>
+    <p>A beautifully detailed, highly readable unit-by-unit breakdown to help you master the AP exam, complete with FRQ and multiple-choice strategies.</p>
+  </header>
+
+  <main class="sg-container">
+    <aside class="sg-sidebar">
+      <h3>Study Guide</h3>
+      <ul>
+        <li><a href="#unit-1">Unit 1: Chemistry of Life</a></li>
+        <li><a href="#unit-2">Unit 2: Cells</a></li>
+        <li><a href="#unit-3">Unit 3: Cellular Energetics</a></li>
+        <li><a href="#unit-4">Unit 4: Cell Communication and Cell Cycle</a></li>
+        <li><a href="#unit-5">Unit 5: Heredity</a></li>
+        <li><a href="#unit-6">Unit 6: Gene Expression and Regulation</a></li>
+        <li><a href="#unit-7">Unit 7: Natural Selection</a></li>
+        <li><a href="#unit-8">Unit 8: Ecology</a></li>
+        <div class="divider"></div>
+        <li><a href="#test-tips">Exam Strategies & Tips</a></li>
+      </ul>
+    </aside>
+
+    <div class="sg-content">
+      <section id="unit-1" class="sg-card yellow">
+        <h2><span class="unit-badge">Unit 1</span> Chemistry of Life (8%–11%)</h2>
+        <p>This unit establishes the chemical foundation for biological systems. It covers the properties of water, the essential elements of life, and the structures and functions of the four major biological macromolecules.</p>
+        
+        <div class="sg-tips-section yellow">
+          <h3>1.1 Structure of Water and Hydrogen Bonding</h3>
+          <ul>
+            <li><strong>Polarity:</strong> Water (H₂O) is a highly polar molecule due to the uneven sharing of electrons between oxygen (highly electronegative) and hydrogen.</li>
+            <li><strong>Hydrogen Bonds:</strong> This polarity allows water molecules to form weak hydrogen bonds with each other, giving water its unique properties essential for life.</li>
+            <li><strong>Unique Properties:</strong> <strong>Cohesion</strong> (water molecules sticking together, creating surface tension), <strong>Adhesion</strong> (water sticking to other surfaces, allowing capillary action in plants), <strong>High Specific Heat</strong> (resisting temperature changes, stabilizing climates), and being an excellent <strong>solvent</strong> (dissolving other polar or charged molecules).</li>
+          </ul>
+        </div>
+        
+        <div class="sg-tips-section yellow">
+          <h3>1.2 Elements of Life</h3>
+          <ul>
+            <li><strong>Carbon's Role:</strong> Carbon is the backbone of biological macromolecules because it can form four stable covalent bonds, allowing for complex, diverse ring and chain structures.</li>
+            <li><strong>Essential Elements:</strong> The major elements essential for living organisms are <strong>CHONPS</strong> (Carbon, Hydrogen, Oxygen, Nitrogen, Phosphorus, Sulfur).</li>
+            <li>Nitrogen is required for building <strong>proteins</strong> and <strong>nucleic acids</strong>.</li>
+            <li>Phosphorus is required for <strong>nucleic acids</strong> and certain types of <strong>lipids</strong> (phospholipids).</li>
+          </ul>
+        </div>
+
+        <div class="sg-tips-section yellow">
+          <h3>1.3 Introduction to Biological Macromolecules</h3>
+          <ul>
+            <li><strong>Monomers and Polymers:</strong> Most macromolecules are polymers built from smaller repeating subunits called monomers.</li>
+            <li><strong>Dehydration Synthesis:</strong> The process of joining monomers to build polymers by covalently bonding them together and <em>removing</em> a water molecule.</li>
+            <li><strong>Hydrolysis:</strong> The process of breaking down polymers into monomers by <em>adding</em> a water molecule to break the covalent bonds.</li>
+          </ul>
+        </div>
+
+        <div class="sg-tips-section yellow">
+          <h3>1.4 Properties of Biological Macromolecules</h3>
+          <ul>
+            <li><strong>Carbohydrates:</strong> Built from monosaccharides (like glucose). Serve as short-term energy storage (starch in plants, glycogen in animals) and structural support (cellulose in plant cell walls, chitin in fungi/exoskeletons).</li>
+            <li><strong>Lipids:</strong> Nonpolar macromolecules containing long hydrocarbon chains. They function as long-term energy storage (fats/triglycerides), structural components of cell membranes (phospholipids), and signaling molecules (steroids).</li>
+            <li><strong>Saturated vs. Unsaturated:</strong> <strong>Saturated Fatty Acids</strong> contain no double bonds, making them straight and solid at room temperature. <strong>Unsaturated Fatty Acids</strong> contain double bonds causing "kinks," making them liquid at room temperature.</li>
+            <li><strong>Phospholipids:</strong> Very important lipids with a polar (hydrophilic) head and two nonpolar (hydrophobic) tails. They naturally arrange into a <strong>lipid bilayer</strong>, the fundamental structure of all cell membranes.</li>
+            <li><strong>Proteins:</strong> Sequences of amino acids linked by <strong>peptide bonds</strong>. The specific order of amino acids (directed by DNA) determines the protein's overall 3D shape, which strictly dictates its function. Functions include catalyzing reactions (enzymes), cellular transport, and structural support.</li>
+            <li><strong>Nucleic Acids (DNA and RNA):</strong> Polymers of nucleotides. They store, transmit, and help express hereditary information. Nucleotides consist of a 5-carbon sugar, a phosphate group, and a nitrogenous base.</li>
+          </ul>
+        </div>
+
+        <div class="sg-tips-section yellow">
+          <h3>1.5 Structure and Function of Biological Macromolecules</h3>
+          <ul>
+            <li><strong>Protein Structure Levels:</strong>
+              <ul>
+                <li><strong>Primary:</strong> Linear sequence of amino acids.</li>
+                <li><strong>Secondary:</strong> Local folding into alpha-helices or beta-pleated sheets via hydrogen bonding of the polypeptide backbone.</li>
+                <li><strong>Tertiary:</strong> The overall 3D shape resulting from R-group interactions (hydrophobic interactions, disulfide bridges, ionic bonds).</li>
+                <li><strong>Quaternary:</strong> The association of two or more polypeptide chains (e.g., hemoglobin).</li>
+              </ul>
+            </li>
+            <li><strong>Nucleic Acid Directionality:</strong> DNA and RNA strands have distinct ends (a 5' end with a phosphate and a 3' end with a hydroxyl). Linear sequences of nucleotides are always synthesized in the <strong>5' to 3'</strong> direction.</li>
+            <li><strong>DNA vs RNA:</strong> DNA contains deoxyribose sugar, thymine, and is typically double-stranded (forming an antiparallel double helix). RNA contains ribose sugar, uracil instead of thymine, and is typically single-stranded.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="unit-2" class="sg-card blue">
+        <h2><span class="unit-badge">Unit 2</span> Cells (10%–13%)</h2>
+        <p>This unit dives into the fundamental unit of life. It covers the structures and functions of cellular organelles, how cells interact with their environment through the plasma membrane, and the critical importance of cell size and compartmentalization.</p>
+
+        <div class="sg-tips-section blue">
+          <h3>2.1 Cell Structure: Subcellular Components</h3>
+          <ul>
+            <li><strong>Ribosomes:</strong> Non-membrane-bound organelles made of rRNA and protein. They are the site of protein synthesis (translation) and are found in all forms of life, reflecting common ancestry.</li>
+            <li><strong>Endoplasmic Reticulum (ER):</strong> 
+              <ul>
+                <li><strong>Rough ER:</strong> Studded with ribosomes; compartmentalizes the cell and packages newly synthesized proteins.</li>
+                <li><strong>Smooth ER:</strong> No ribosomes; functions in detoxification and lipid synthesis.</li>
+              </ul>
+            </li>
+            <li><strong>Golgi Complex:</strong> A series of flattened membrane sacs. It correctly folds and chemically modifies newly synthesized proteins and packages them for protein trafficking.</li>
+            <li><strong>Mitochondria:</strong> Have a double membrane (inner membrane is highly folded into <strong>cristae</strong> to increase surface area). Function in ATP production through cellular respiration.</li>
+            <li><strong>Lysosomes:</strong> Membrane-enclosed sacs containing hydrolytic enzymes, crucial for intracellular digestion (autophagy) and programmed cell death (apoptosis).</li>
+            <li><strong>Chloroplasts:</strong> Found in photosynthetic algae and plants. Have a double membrane, containing thylakoids (stacked into grana) and stroma, where light-dependent and light-independent reactions occur.</li>
+            <li><strong>Vacuoles:</strong> Membrane-bound sacs playing various roles. In plants, a large <strong>central vacuole</strong> serves in water retention (turgor pressure) and waste storage.</li>
+          </ul>
+        </div>
+
+        <div class="sg-tips-section blue">
+          <h3>2.2 Cell Structure and Function</h3>
+          <ul>
+            <li><strong>Organelle Interaction:</strong> Organelles interact to perform complex functions. For example, the ER, Golgi complex, and vesicles work tightly together to synthesize, modify, and secrete proteins (the endomembrane system).</li>
+            <li><strong>Energy Capture:</strong> The highly folded inner membranes of mitochondria and chloroplasts provide massive surface area to maximize the efficiency of metabolic reactions (ATP synthesis).</li>
+          </ul>
+        </div>
+        
+        <div class="sg-tips-section blue">
+          <h3>2.3 Cell Size</h3>
+          <ul>
+            <li><strong>Surface Area-to-Volume Ratio:</strong> As cells increase in volume, their relative surface area decreases. Smaller cells have a <em>higher</em> surface area-to-volume ratio.</li>
+            <li><strong>Why it matters:</strong> A high SA:V ratio facilitates rapid and efficient exchange of materials (nutrients, waste, thermal energy) with the environment. If a cell grows too large, the plasma membrane cannot exchange materials fast enough to sustain the massive volume, often triggering cell division.</li>
+          </ul>
+        </div>
+
+        <div class="sg-tips-section blue">
+          <h3>2.4 & 2.5 Plasma Membranes and Permeability</h3>
+          <ul>
+            <li><strong>Fluid Mosaic Model:</strong> The cell membrane is a structurally dynamic layer composed of a phospholipid bilayer with embedded embedded proteins, steroids (like cholesterol for fluidity regulation), glycoproteins, and glycolipids.</li>
+            <li><strong>Selective Permeability:</strong>
+              <ul>
+                <li><strong>Easy Passage:</strong> Small, nonpolar molecules (like O₂, CO₂, N₂) freely pass across the membrane.</li>
+                <li><strong>Difficult Passage:</strong> Hydrophilic substances (large polar molecules and ions) cannot freely cross because of the hydrophobic lipid tails. They must move through embedded transport proteins (<strong>channel proteins</strong> or <strong>carrier proteins</strong>).</li>
+                <li><strong>Water:</strong> Passes in small amounts directly, but primarily travels in massive quantities through specialized protein channels called <strong>aquaporins</strong>.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sg-tips-section blue">
+          <h3>2.6 & 2.7 Membrane Transport & Osmosis</h3>
+          <ul>
+            <li><strong>Passive Transport:</strong> The net movement of molecules from high concentration to low concentration (<em>down</em> the concentration gradient). Requires NO direct input of metabolic energy (ATP). Includes standard diffusion and <strong>facilitated diffusion</strong> (using transport proteins).</li>
+            <li><strong>Active Transport:</strong> Movement of molecules from low concentration to high concentration (<em>against</em> the concentration gradient). Requires energy (ATP) and carrier proteins (e.g., the Sodium-Potassium pump). Also establishes crucial concentration gradients.</li>
+            <li><strong>Endocytosis & Exocytosis:</strong> Bulk transport of massive molecules utilizing cellular energy to form or fuse vesicles with the plasma membrane.</li>
+            <li><strong>Osmosis & Tonicity:</strong> 
+              <ul>
+                <li><strong>Hypertonic:</strong> Higher solute concentration outside the cell. Water rushes <em>out</em>, cell shrivels.</li>
+                <li><strong>Hypotonic:</strong> Lower solute concentration outside the cell. Water rushes <em>in</em>, cell swells (animal cells may burst; plant cells become turgid, which is their ideal state).</li>
+                <li><strong>Isotonic:</strong> Equal solute concentrations resulting in dynamic equilibrium (no net movement of water).</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sg-tips-section blue">
+          <h3>2.10 & 2.11 Cellular Compartmentalization</h3>
+          <ul>
+            <li><strong>Eukaryotes vs. Prokaryotes:</strong> Eukaryotic cells feature numerous internal membrane-bound organelles (like the nucleus) that physically partition the cell into specialized regions. Prokaryotes strictly lack these internal membrane-bound organelles.</li>
+            <li><strong>Origins (Endosymbiotic Theory):</strong> Hypothesizes that membrane-bound organelles like mitochondria and chloroplasts were once free-living prokaryotes that were engulfed by a larger ancestral eukaryotic cell. Evidence includes: mitochondria/chloroplasts have double membranes, circular DNA, and their own ribosomes (similar to bacterial ribosomes).</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="unit-3" class="sg-card purple">
+        <h2><span class="unit-badge">Unit 3</span> Cellular Energetics (12%–16%)</h2>
+        <p>This unit focuses on how cells capture, store, and utilize energy. It covers the crucial role of enzymes in regulating metabolic pathways, and the detailed mechanisms of photosynthesis and cellular respiration.</p>
+
+        <div class="sg-tips-section purple">
+          <h3>3.1 & 3.2 Enzymes and Enzyme Catalysis</h3>
+          <ul>
+            <li><strong>Structure and Function:</strong> Enzymes are biological catalysts (primarily proteins) that speed up chemical reactions by lowering the <strong>activation energy</strong> required. Their highly specific 3D shape creates an <strong>active site</strong> that precisely binds to a specific <strong>substrate</strong>.</li>
+            <li><strong>Induced Fit Model:</strong> When the substrate binds, the enzyme slightly changes shape to fit more snugly, facilitating the breaking or forming of chemical bonds.</li>
+            <li><strong>Reusability:</strong> Enzymes are not consumed in the reaction; they release the product and are immediately ready to catalyze another reaction.</li>
+          </ul>
+        </div>
+
+        <div class="sg-tips-section purple">
+          <h3>3.3 Environmental Impacts on Enzyme Function</h3>
+          <ul>
+            <li><strong>Denaturation:</strong> Extreme changes in optimal <strong>temperature</strong> or <strong>pH</strong> can permanently disrupt the hydrogen bonds and interactions holding the enzyme's 3D shape together. If the active site is destroyed, the enzyme is <em>denatured</em> and rendered non-functional.</li>
+            <li><strong>Concentration Effects:</strong> Increasing substrate concentration increases the reaction rate until all enzyme active sites are occupied (saturation point).</li>
+            <li><strong>Inhibition:</strong> 
+              <ul>
+                <li><strong>Competitive Inhibitors:</strong> Molecules that physically mimic the substrate and directly block the active site.</li>
+                <li><strong>Noncompetitive (Allosteric) Inhibitors:</strong> Molecules that bind to an <strong>allosteric site</strong> (somewhere other than the active site), changing the enzyme's overall shape so the active site can no longer bind the substrate.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sg-tips-section purple">
+          <h3>3.4 Cellular Energy</h3>
+          <ul>
+            <li><strong>Energy Coupling:</strong> Cells manage their energy resources by using the energy released from exergonic (energy-releasing) reactions to drive endergonic (energy-requiring) reactions.</li>
+            <li><strong>ATP (Adenosine Triphosphate):</strong> The primary energy currency of the cell. Energy is released when the bond between the second and third phosphate groups is broken via hydrolysis, converting ATP into ADP.</li>
+          </ul>
+        </div>
+
+        <div class="sg-tips-section purple">
+          <h3>3.5 Photosynthesis</h3>
+          <ul>
+            <li><strong>Overview:</strong> The biological process that captures light energy from the sun and converts it into chemical energy (sugars). Primarily occurs in the <strong>chloroplasts</strong> of plants and algae.</li>
+            <li><strong>Light-Dependent Reactions:</strong> Occur in the <strong>thylakoid membrane</strong>. Light energy is absorbed by <strong>chlorophyll</strong>, exciting electrons. These electrons travel down an Electron Transport Chain (ETC), pumping protons (H⁺) into the thylakoid space to create an electrochemical gradient. 
+              <ul>
+                <li><strong>ATP Synthase</strong> utilizes this gradient to generate ATP.</li>
+                <li>Water is split (photolysis) to replace the electrons, releasing <strong>O₂</strong> as a byproduct.</li>
+                <li>NADP⁺ is reduced to <strong>NADPH</strong>.</li>
+              </ul>
+            </li>
+            <li><strong>The Calvin Cycle (Light-Independent Reactions):</strong> Occurs in the <strong>stroma</strong>. Uses the ATP and NADPH generated in the light reactions, along with CO₂ from the atmosphere, to produce G3P (a precursor to glucose). The enzyme <strong>Rubisco</strong> is crucial for carbon fixation.</li>
+          </ul>
+        </div>
+
+        <div class="sg-tips-section purple">
+          <h3>3.6 Cellular Respiration</h3>
+          <ul>
+            <li><strong>Overview:</strong> The process of breaking down organic molecules (like glucose) to produce ATP. Occurs primarily in the <strong>mitochondria</strong> of all eukaryotic cells.</li>
+            <li><strong>Glycolysis:</strong> Occurs in the cytoplasm (anaerobic). One glucose molecule is broken down into two molecules of <strong>pyruvate</strong>, yielding a net of 2 ATP and 2 NADH.</li>
+            <li><strong>Krebs Cycle (Citric Acid Cycle):</strong> Occurs in the mitochondrial matrix. Pyruvate is further oxidized, releasing CO₂. Produces 2 ATP and a massive amount of electron carriers (<strong>NADH</strong> and <strong>FADH₂</strong>).</li>
+            <li><strong>Oxidative Phosphorylation (ETC and Chemiosmosis):</strong> Occurs across the inner mitochondrial membrane (cristae). 
+              <ul>
+                <li>NADH and FADH₂ drop off high-energy electrons at the ETC.</li>
+                <li>The energy from these electrons is used to actively pump protons (H⁺) into the intermembrane space.</li>
+                <li><strong>ATP Synthase</strong> harnesses this proton gradient to mass-produce ATP (roughly 30-34 ATP per glucose).</li>
+                <li><strong>Oxygen is the final electron acceptor</strong>, combining with protons to form water.</li>
+              </ul>
+            </li>
+            <li><strong>Fermentation:</strong> An anaerobic pathway allowing glycolysis to continue in the absence of oxygen by regenerating NAD⁺. Produces harmful byproducts (lactic acid in humans, ethanol/CO₂ in yeast) and yields very little ATP.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="unit-4" class="sg-card yellow">
+        <h2><span class="unit-badge">Unit 4</span> Cell Communication and Cell Cycle (10%–15%)</h2>
+        <p>This unit examines how cells interact with their environment and each other through chemical signals, and how they carefully control their own replication and division.</p>
+
+        <div class="sg-tips-section yellow">
+          <h3>4.1 & 4.2 Cell Communication</h3>
+          <ul>
+            <li><strong>Direct Contact:</strong> Cells can communicate via direct physical contact. For example, animal cells use <strong>gap junctions</strong> and plant cells use <strong>plasmodesmata</strong> to share cytosol and chemical signals directly. Cells can also recognize each other via surface receptors (e.g., immune system antigen-presenting cells).</li>
+            <li><strong>Local Signaling:</strong> Sending chemical signals (<strong>ligands</strong>) over short distances. Examples include <strong>paracrine signaling</strong> (like growth factors released nearby) and synaptic signaling (neurotransmitters across a synapse).</li>
+            <li><strong>Long-Distance Signaling:</strong> Endocrine signaling relies on <strong>hormones</strong> released into the bloodstream to reach target cells anywhere in the body. Only cells featuring the highly specific receptor for that hormone will respond.</li>
+          </ul>
+        </div>
+
+        <div class="sg-tips-section yellow">
+          <h3>4.3 & 4.4 Signal Transduction Pathways</h3>
+          <ul>
+            <li><strong>1. Reception:</strong> A signaling molecule (ligand) binds to a highly specific receptor protein on the target cell's surface (or inside the cell for small, nonpolar ligands like steroids).</li>
+            <li><strong>2. Transduction:</strong> The binding changes the receptor's shape, initiating a massive cascade of interior molecular interactions. This often involves <strong>phosphorylation cascades</strong> (where kinases add phosphate groups to activate proteins) and the use of <strong>second messengers</strong> (like cyclic AMP or Calcium ions) to rapidly amplify the signal.</li>
+            <li><strong>3. Response:</strong> The amplified signal triggers a specific cellular response, such as turning on a gene in the nucleus (altering gene expression), activating an enzyme, or triggering apoptosis.</li>
+            <li><strong>Changes in Pathways:</strong> Mutations in the receptor protein or any component of the signaling cascade can fundamentally alter the cellular response, often leading to diseases like cancer or diabetes.</li>
+          </ul>
+        </div>
+
+        <div class="sg-tips-section yellow">
+          <h3>4.5 Feedback</h3>
+          <ul>
+            <li><strong>Negative Feedback:</strong> Mechanisms designed to maintain homeostasis by returning a system back to its target set point. For example, sweating to lower high body temperature, or releasing insulin to lower high blood sugar.</li>
+            <li><strong>Positive Feedback:</strong> Mechanisms that amplify a response and push a system <em>further away</em> from its starting state until a specific outcome takes over. Examples include childbirth (oxytocin release inducing harder contractions) and fruit ripening (ethylene gas).</li>
+          </ul>
+        </div>
+
+        <div class="sg-tips-section yellow">
+          <h3>4.6 & 4.7 The Cell Cycle and Regulation</h3>
+          <ul>
+            <li><strong>Interphase:</strong> The longest part of the cell cycle where the cell grows and prepares for division. It consists of:
+              <ul>
+                <li><strong>G1 Phase:</strong> Cell growth.</li>
+                <li><strong>S Phase:</strong> DNA Synthesis/Replication (creating two identical sister chromatids).</li>
+                <li><strong>G2 Phase:</strong> Final preparation and organelle duplication.</li>
+              </ul>
+            </li>
+            <li><strong>M Phase (Mitosis):</strong> The division of the nucleus, resulting in two genetically identical diploid daughter cells. Stages: Prophase, Metaphase, Anaphase, Telophase. Followed by <strong>Cytokinesis</strong> (division of the cytoplasm).</li>
+            <li><strong>Checkpoints:</strong> Strict internal controls that halt the cell cycle until specific conditions are met. 
+              <ul>
+                <li>The <strong>G1 checkpoint</strong> checks for DNA damage.</li>
+                <li>The <strong>G2 checkpoint</strong> ensures DNA was replicated correctly in the S phase.</li>
+                <li>The <strong>M (Spindle) checkpoint</strong> ensures chromosomes are attached to the spindle correctly.</li>
+              </ul>
+            </li>
+            <li><strong>Cyclins and CDKs:</strong> The primary proteins regulating the cell cycle checkpoints. Cyclin concentrations fluctuate cyclically, binding to constant Cyclin-Dependent Kinases (CDKs) to push the cell past checkpoints.</li>
+            <li><strong>Cancer:</strong> A direct result of disruptions to the cell cycle (often via mutations to proto-oncogenes or tumor-suppressor genes like p53). Cancerous cells bypass checkpoints and divide uncontrollably.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="unit-5" class="sg-card blue">
+        <h2><span class="unit-badge">Unit 5</span> Heredity (8%–11%)</h2>
+        <p>This unit explores how genetic information is faithfully transmitted from one generation to the next, covering the mechanisms of sexual reproduction and the complex patterns of biological inheritance.</p>
+
+        <div class="sg-tips-section blue">
+          <h3>5.1 & 5.2 Meiosis and Genetic Diversity</h3>
+          <ul>
+            <li><strong>Purpose:</strong> A specialized form of cell division that incredibly reduces the chromosome number by half, creating four <strong>haploid</strong> (n) gametes (sperm/egg) from one diploid (2n) parent cell. Essential for sexual reproduction.</li>
+            <li><strong>Meiosis I:</strong> Separation of <strong>homologous chromosomes</strong> (chromosome pairs inherited from each parent).
+              <ul>
+                <li><strong>Crossing Over:</strong> Occurs during Prophase I. Homologous chromosomes pair up side-by-side and physically exchange DNA segments, creating massive genetic variation (recombinant chromosomes).</li>
+                <li><strong>Independent Assortment:</strong> Occurs during Metaphase I. The random alignment of homologous pairs along the metaphase plate massively increases genetic combinations in gametes.</li>
+              </ul>
+            </li>
+            <li><strong>Meiosis II:</strong> Separation of <strong>sister chromatids</strong> (identical copies made during S phase), structurally identical to mitosis.</li>
+            <li><strong>Random Fertilization:</strong> The fusion of two uniquely generated haploid gametes further exponentially increases genetic diversity in the offspring.</li>
+          </ul>
+        </div>
+
+        <div class="sg-tips-section blue">
+          <h3>5.3 Mendelian Genetics</h3>
+          <ul>
+            <li><strong>Gregor Mendel's Laws:</strong>
+              <ul>
+                <li><strong>Law of Segregation:</strong> The two alleles for a trait separate randomly during gamete formation, so each gamete only carries one allele.</li>
+                <li><strong>Law of Independent Assortment:</strong> The inheritance of one trait does not strictly affect the inheritance of another trait (assuming genes are located on different chromosomes).</li>
+              </ul>
+            </li>
+            <li><strong>Terminology:</strong> <strong>Genotype</strong> (the actual genetic allele combination, e.g., Aa) vs. <strong>Phenotype</strong> (the physical expression, e.g., tall plant). <strong>Homozygous</strong> (AA or aa) vs. <strong>Heterozygous</strong> (Aa).</li>
+            <li><strong>Punnett Squares & Probability:</strong> Used mathematically to predict the probability of genotypes and phenotypes resulting from a genetic cross (e.g., monohybrid, dihybrid, testcrosses). Product rule for independent events (A AND B), sum rule for mutually exclusive events (A OR B).</li>
+          </ul>
+        </div>
+
+        <div class="sg-tips-section blue">
+          <h3>5.4 Non-Mendelian Genetics</h3>
+          <ul>
+            <li><strong>Incomplete Dominance:</strong> Heterozygotes display a <em>blended</em> intermediate phenotype (e.g., Red x White = Pink flowers).</li>
+            <li><strong>Codominance:</strong> Both alleles are fully and simultaneously expressed in heterozygotes (e.g., AB blood type features both A and B antigens).</li>
+            <li><strong>Sex-Linked Traits:</strong> Genes located specifically on the X or Y sex chromosomes. Recessive X-linked traits (like colorblindness or hemophilia) overwhelmingly affect biological males (XY) because they lack a second X chromosome to mask the recessive allele.</li>
+            <li><strong>Polygenic Inheritance:</strong> A single phenotypic trait (like human height or skin color) controlled cumulatively by multiple genes, resulting in a continuous bell-curve distribution.</li>
+            <li><strong>Linked Genes:</strong> Genes located very close together on the <em>same</em> chromosome. They tend to be inherited together and drastically violate Mendel's Law of Independent Assortment. The closer they are, the lower the recombination frequency.</li>
+          </ul>
+        </div>
+
+        <div class="sg-tips-section blue">
+          <h3>5.5 Environmental Effects on Phenotype</h3>
+          <ul>
+            <li><strong>Phenotypic Plasticity:</strong> An individual's genome provides the blueprint, but the <strong>environment</strong> dramatically influences how (and if) those genes are ultimately expressed.</li>
+            <li><strong>Examples:</strong> Hydrangea flower color changes based entirely on soil pH. Himalayan rabbit fur darkens in cold patches to absorb heat. Increased human melanin production heavily influenced by UV light exposure.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="unit-6" class="sg-card purple">
+        <h2><span class="unit-badge">Unit 6</span> Gene Expression and Regulation (12%–16%)</h2>
+        <p>This unit covers the "Central Dogma" of biology: how genetic information flows from DNA to RNA to functional proteins, and how cells strictly regulate this process to specialize and respond to their environment.</p>
+
+        <div class="sg-tips-section purple">
+          <h3>6.1 & 6.2 DNA and RNA Structure & Replication</h3>
+          <ul>
+            <li><strong>Structure:</strong> DNA is an antiparallel double helix. Adenine pairs with Thymine (2 hydrogen bonds); Guanine pairs with Cytosine (3 hydrogen bonds). RNA is a single-stranded molecule containing Uracil instead of Thymine.</li>
+            <li><strong>Semiconservative Replication:</strong> Each new DNA molecule consists of one original (template) strand and one newly synthesized strand.</li>
+            <li><strong>Replication Machinery:</strong> 
+              <ul>
+                <li><strong>Helicase:</strong> Unzips the DNA double helix.</li>
+                <li><strong>Topoisomerase:</strong> Relaxes supercoiling ahead of the replication fork.</li>
+                <li><strong>DNA Polymerase:</strong> Synthesizes the new strand entirely in the <strong>5' to 3'</strong> direction. Requires an RNA primer to start.</li>
+                <li><strong>Leading vs. Lagging:</strong> The leading strand is synthesized continuously. The lagging strand is synthesized discontinuously in short <strong>Okazaki fragments</strong>, which are later stitched together by <strong>Ligase</strong>.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sg-tips-section purple">
+          <h3>6.3 & 6.4 Transcription and Translation</h3>
+          <ul>
+            <li><strong>Transcription (DNA to mRNA):</strong> Occurs in the nucleus. <strong>RNA Polymerase</strong> binds to the promoter, unzips the DNA, and synthesizes a complementary mRNA transcript in the 5' to 3' direction.</li>
+            <li><strong>RNA Processing (Eukaryotes only):</strong> Before leaving the nucleus, the pre-mRNA is modified. A <strong>5' GTP cap</strong> and a <strong>3' poly-A tail</strong> are added for protection. <strong>Introns</strong> (non-coding sequences) are cut out, and <strong>exons</strong> (coding sequences) are spliced together. Alternative splicing allows one gene to produce multiple different proteins.</li>
+            <li><strong>Translation (mRNA to Protein):</strong> Occurs at the <strong>ribosomes</strong> (in cytoplasm or Rough ER). Reads the mRNA in triplets called <strong>codons</strong>. <strong>tRNA</strong> molecules bring specific amino acids to the ribosome, matching their <strong>anticodon</strong> to the mRNA codon, forming a polypeptide chain.</li>
+          </ul>
+        </div>
+
+        <div class="sg-tips-section purple">
+          <h3>6.5 & 6.6 Gene Expression and Regulation</h3>
+          <ul>
+            <li><strong>Prokaryotic Regulation (Operons):</strong> Bacteria cluster functionally related genes together under one promoter called an <strong>operon</strong>. 
+              <ul>
+                <li><strong>Inducible Operons (e.g., lac operon):</strong> Normally turned OFF. A specific inducer molecule binds to the repressor, removing it and turning transcription ON.</li>
+                <li><strong>Repressible Operons (e.g., trp operon):</strong> Normally turned ON. The product itself acts as a corepressor, shutting transcription OFF when enough is made.</li>
+              </ul>
+            </li>
+            <li><strong>Eukaryotic Regulation:</strong> Highly complex. Controlled by the binding of <strong>Transcription Factors</strong> to promoter regions. Also regulated epigenetically by tightly winding DNA around histones (preventing transcription) or unwinding it (allowing transcription) via methylation and acetylation.</li>
+            <li><strong>Cell Specialization:</strong> All somatic cells in an organism have the exact same DNA. They differentiate into vastly different cell types solely based on <em>which</em> specific genes are expressed or heavily repressed.</li>
+          </ul>
+        </div>
+
+        <div class="sg-tips-section purple">
+          <h3>6.7 & 6.8 Mutations and Biotechnology</h3>
+          <ul>
+            <li><strong>Mutations:</strong> The primary source of all new genetic variation. 
+              <ul>
+                <li><strong>Point Mutations:</strong> Changing a single nucleotide (silent, missense, or nonsense).</li>
+                <li><strong>Frameshift Mutations:</strong> Insertions or deletions that brutally shift the entire reading frame, usually rendering the protein completely non-functional.</li>
+              </ul>
+            </li>
+            <li><strong>Biotechnology:</strong>
+              <ul>
+                <li><strong>Gel Electrophoresis:</strong> Separates DNA fragments based on size and highly negative electrical charge (smaller fragments travel faster and further).</li>
+                <li><strong>PCR (Polymerase Chain Reaction):</strong> Rapidly amplifies millions of copies of a specific targeted DNA sequence in a lab.</li>
+                <li><strong>Bacterial Transformation:</strong> Introducing foreign plasmids into bacteria to mass-produce targeted human proteins (like insulin).</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="unit-7" class="sg-card yellow">
+        <h2><span class="unit-badge">Unit 7</span> Natural Selection (13%–20%)</h2>
+        <p>This is the most heavily weighted unit on the exam. It covers Charles Darwin's foundational theory, the massive body of evidence supporting evolution, how populations genetically change over time, and the mechanisms of speciation.</p>
+
+        <div class="sg-tips-section yellow">
+          <h3>7.1 & 7.2 Natural and Artificial Selection</h3>
+          <ul>
+            <li><strong>Natural Selection:</strong> The mechanism of evolution. Individuals with inherited traits (adaptations) that are best suited to their local environment are more likely to survive and reproduce, passing those advantageous alleles to the next generation. It strictly acts on <em>phenotypes</em>, not genotypes.</li>
+            <li><strong>Requirements:</strong> For natural selection to occur, there must be overpopulation, genetic variation within the population, competition for limited resources, and differential reproductive success (fitness).</li>
+            <li><strong>Artificial Selection:</strong> Humans intentionally selecting and breeding individuals with desired traits (e.g., dog breeding, agricultural crops), forcing rapid evolutionary change.</li>
+          </ul>
+        </div>
+
+        <div class="sg-tips-section yellow">
+          <h3>7.3, 7.4, & 7.5 Population Genetics</h3>
+          <ul>
+            <li><strong>Evolution Defined:</strong> Evolution is biologically defined as a change in the allele frequencies of a population over generations. <em>Individuals do not evolve; populations evolve.</em></li>
+            <li><strong>Hardy-Weinberg Equilibrium:</strong> A crucial mathematical baseline describing a completely non-evolving population. For a population to remain in H-W equilibrium, five conditions must be met: No mutations, random mating, no gene flow (migration), very large population size, and no natural selection.</li>
+            <li><strong>H-W Equations:</strong> 
+              <ul>
+                <li><strong>p + q = 1</strong> (Allele frequencies: p = dominant allele, q = recessive allele)</li>
+                <li><strong>p² + 2pq + q² = 1</strong> (Genotype frequencies: p² = homozygous dominant, 2pq = heterozygous, q² = homozygous recessive)</li>
+              </ul>
+            </li>
+            <li><strong>Genetic Drift:</strong> Random, non-adaptive fluctuations in allele frequencies. Most impactful in very small populations. Includes the <strong>Bottleneck Effect</strong> (massive population reduction) and the <strong>Founder Effect</strong> (isolated splinter group).</li>
+          </ul>
+        </div>
+
+        <div class="sg-tips-section yellow">
+          <h3>7.6 Evidence of Evolution</h3>
+          <ul>
+            <li><strong>Morphological:</strong> <strong>Homologous structures</strong> (similar underlying anatomy due to common ancestry, e.g., human arm/bat wing). <strong>Vestigial structures</strong> (remnants of structures that served important functions in ancestors, e.g., human tailbone). <em>Note:</em> Analogous structures (similar function but no common ancestry, e.g., bird wing/insect wing) demonstrate convergent evolution, not common ancestry.</li>
+            <li><strong>Biochemical:</strong> The most universally definitive evidence. All life uses DNA/RNA, the exact same genetic code, and highly conserved core metabolic pathways (like glycolysis). Comparing specific DNA or protein sequences (like Cytochrome C) precisely maps evolutionary distances.</li>
+            <li><strong>Fossil Record & Biogeography:</strong> Fossils provide a chronological timeline of transitional forms. Biogeography studies the geographic distribution of species (e.g., island endemics related to mainland species).</li>
+          </ul>
+        </div>
+
+        <div class="sg-tips-section yellow">
+          <h3>7.7 Phylogeny</h3>
+          <ul>
+            <li><strong>Phylogenetic Trees and Cladograms:</strong> Visual models illustrating evolutionary relationships based on shared morphological and/or biochemical characteristics.</li>
+            <li><strong>Nodes:</strong> Represent the most recent common ancestor between branching lineages.</li>
+            <li><strong>Outgroups:</strong> A lineage closely related to the group being studied, but branching off earlier. Used as a baseline for comparison.</li>
+          </ul>
+        </div>
+
+        <div class="sg-tips-section yellow">
+          <h3>7.9 & 7.10 Speciation</h3>
+          <ul>
+            <li><strong>Definition (Biological Species Concept):</strong> A species is a group of populations that can interbreed in nature and produce viable, fertile offspring.</li>
+            <li><strong>Allopatric vs. Sympatric:</strong> 
+              <ul>
+                <li><strong>Allopatric Speciation:</strong> A population is divided by a physical geographic barrier (mountain, river), leading to isolated evolutionary trajectories.</li>
+                <li><strong>Sympatric Speciation:</strong> Speciation occurring without geographic isolation (often due to polyploidy in plants, or sexual selection/habitat differentiation).</li>
+              </ul>
+            </li>
+            <li><strong>Reproductive Isolation Mechanisms:</strong> Prezygotic barriers (habitat, temporal, behavioral, mechanical, gametic isolation) prevent mating/fertilization. Postzygotic barriers (reduced hybrid viability, reduced hybrid fertility, hybrid breakdown) happen after fertilization.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="unit-8" class="sg-card blue">
+        <h2><span class="unit-badge">Unit 8</span> Ecology (10%–15%)</h2>
+        <p>The final unit focuses on the interactions between organisms and their environments, ranging from individual behavioral responses to complex global ecosystem dynamics.</p>
+
+        <div class="sg-tips-section blue">
+          <h3>8.1 Responses to the Environment</h3>
+          <ul>
+            <li><strong>Behavioral Responses:</strong> Organisms respond to internal and external stimuli to increase survivability. This includes innate behaviors (instincts, fixed action patterns) and learned behaviors (imprinting, conditioning).</li>
+            <li><strong>Communication:</strong> Visual, audible, tactile, electrical, and chemical signals (pheromones) dictate social interactions, dominance hierarchies, and mating choices.</li>
+            <li><strong>Endotherms vs. Ectotherms:</strong> Endotherms use thermal energy generated by metabolism to maintain constant body temperatures. Ectotherms rely strictly on external environmental sources to regulate body temperature.</li>
+          </ul>
+        </div>
+
+        <div class="sg-tips-section blue">
+          <h3>8.2 Energy Flow Through Ecosystems</h3>
+          <ul>
+            <li><strong>Trophic Levels:</strong> Energy flows linearly from Primary Producers (autotrophs) to Primary, Secondary, and Tertiary Consumers (heterotrophs), and finally to Decomposers.</li>
+            <li><strong>The 10% Rule:</strong> Only approximately 10% of the energy from one trophic level is successfully transferred to the next. The remaining 90% is lost primarily as heat or used for the organism's own metabolism, heavily restricting the length of food chains.</li>
+          </ul>
+        </div>
+
+        <div class="sg-tips-section blue">
+          <h3>8.3 & 8.4 Population Ecology</h3>
+          <ul>
+            <li><strong>Exponential Growth:</strong> A population grows geometrically under ideal conditions with unlimited resources (J-shaped curve). Equation: dN/dt = r_max * N.</li>
+            <li><strong>Logistic Growth:</strong> A population grows rapidly initially but inevitably slows and stops as it reaches the <strong>carrying capacity (K)</strong> of its environment due to limited resources (S-shaped curve). Equation: dN/dt = r_max * N * ((K-N)/K).</li>
+            <li><strong>Limiting Factors:</strong> 
+              <ul>
+                <li><strong>Density-Dependent:</strong> Factors whose impact scales with population size (e.g., competition, disease, predation, territoriality).</li>
+                <li><strong>Density-Independent:</strong> Factors that impact a population regardless of its size (e.g., natural disasters, extreme weather, human impact).</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sg-tips-section blue">
+          <h3>8.5 Community Ecology</h3>
+          <ul>
+            <li><strong>Interspecific Interactions:</strong>
+              <ul>
+                <li><strong>Competition (-/-):</strong> Two species competing for the exact same limited resource (Competitive Exclusion Principle).</li>
+                <li><strong>Predation (+/-):</strong> One species kills and consumes the other. Drives immense evolutionary adaptations (camouflage, toxins).</li>
+                <li><strong>Mutualism (+/+):</strong> Both species benefit from the interaction (e.g., bees and flowers).</li>
+                <li><strong>Commensalism (+/0):</strong> One species benefits while the other is completely unaffected.</li>
+                <li><strong>Parasitism (+/-):</strong> One species benefits by extracting nutrients from a living host, harming it.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sg-tips-section blue">
+          <h3>8.6 & 8.7 Biodiversity and Disruptions</h3>
+          <ul>
+            <li><strong>Keystone Species:</strong> A species whose impact on its community or ecosystem is disproportionately massive relative to its utter lack of abundance. Removing them often collapses the entire ecosystem architecture (e.g., Sea otters keeping sea urchin populations in check).</li>
+            <li><strong>Biodiversity:</strong> High genetic and species diversity massively increases ecosystem resilience against disruptions (like diseases or climate change).</li>
+            <li><strong>Human Impact:</strong> Habitat destruction, invasive species, overharvesting, pollution, and climate change are currently the leading causes of global biodiversity destruction.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="test-tips" class="sg-card purple">
+        <h2><span class="unit-badge">Exam Prep</span> Test Format & Strategies</h2>
+        
+        <div class="sg-format-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+          
+          <!-- Format Column -->
+          <div class="sg-format-card" style="background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
+            <h3 style="color: var(--primary); margin-top: 0; margin-bottom: 1.5rem; font-size: 1.5rem;">The AP Biology Exam</h3>
+            
+            <div style="margin-bottom: 1.5rem;">
+              <h4 style="color: var(--text-main); margin-bottom: 0.5rem;">Section I: Multiple Choice</h4>
+              <ul style="color: var(--text-muted); padding-left: 1.5rem; line-height: 1.6; font-size: 1.05rem;">
+                <li><strong>60 Questions</strong> | 1 Hour 30 Minutes | 50% of Score</li>
+                <li>Focuses heavily on interpreting scientific models, analyzing lab data, and applied mathematical concepts over raw memorization.</li>
+                <li>Expect long paragraph descriptions of experiments paired with multiple questions (question sets).</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 style="color: var(--text-main); margin-bottom: 0.5rem;">Section II: Free Response (FRQ)</h4>
+              <ul style="color: var(--text-muted); padding-left: 1.5rem; line-height: 1.6; font-size: 1.05rem;">
+                <li><strong>6 Questions</strong> | 1 Hour 30 Minutes | 50% of Score</li>
+                <li><strong>2 Long FRQs:</strong> One heavily involves interpreting and evaluating experimental results (graphing required!). The other involves analyzing a biological phenomenon.</li>
+                <li><strong>4 Short FRQs:</strong> Covering scientific investigation, conceptual analysis, analysis of a model or visual representation, and analysis of data.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Tips Column -->
+          <div class="sg-tips-card" style="background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
+            <h3 style="color: var(--clr-purple); margin-top: 0; margin-bottom: 1.5rem; font-size: 1.5rem;">Keys to a 5</h3>
+            
+            <ul style="color: var(--text-muted); padding-left: 1.5rem; line-height: 1.6; font-size: 1.05rem;">
+              <li style="margin-bottom: 1rem;"><strong>Master the Formula Sheet:</strong> You are provided a formula sheet. Know exactly <em>when</em> to use Standard Error of the Mean, Chi-Square, Hardy-Weinberg, and Water Potential, not just how to calculate them.</li>
+              <li style="margin-bottom: 1rem;"><strong>Graphing is Mandatory:</strong> Practice graphing data accurately for FRQ 1. Always label axes with specific units, provide an appropriate title, and scale the axes uniformly. Draw error bars when Standard Error (±2 SEM) is provided.</li>
+              <li style="margin-bottom: 1rem;"><strong>Answer the Prompt (ATP):</strong> For FRQs, specifically identify the task verbs (Identify, Describe, Explain, Calculate, Predict, Justify). "Justify" means using data to support a claim. "Explain" requires a "because" statement connecting the biological concept.</li>
+              <li style="margin-bottom: 1rem;"><strong>Don't Panic Over Weird Examples:</strong> The College Board will use obscure enzymes or strange animals you've never heard of. Don't panic. The underlying biological principle (e.g., negative feedback, membrane transport) is always something you've learned. Find the concept beneath the fluff.</li>
+              <li><strong>Watch Your Pacing:</strong> Target roughly 1.5 minutes per multiple-choice question. For the FRQ section, aim to spend ~20 minutes on each Long FRQ and ~10 minutes on each Short FRQ.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <section id="Contact" class="contact section"><img src="../images/621e0d402549e1900b97f7a3_wave-4.svg" loading="lazy" alt="" class="wave blue-bg">
+    <div class="bg-container purple">
+      <div class="container width-100 contact-padding">
+        <div class="corner-blob-wrapper"><img src="../images/621dca93277c2505f9bd849c_section_blob3.svg" loading="lazy" width="17" alt="" class="corner-blob">
+          <h2 class="section-subheader">Contact</h2>
+        </div>
+        <div class="contact-subtitle-wrapper width-100">
+          <h1 class="section-subtitle contact-title-underline border-bottom">Keep In Touch!</h1>
+        </div>
+        <div class="contact-links width-100 border-bottom">
+          <div class="main-links">
+            <div class="call-email-links">
+              <div class="corner-blob-wrapper"><img src="../images/621dfcd10187caf50f94dcc7_section_blob4.svg" loading="lazy" width="17" alt="" class="corner-blob nav-link-blob">
+                <a href="tel:18582165827" class="nav-link">Give Us A Call</a>
+              </div>
+              <div class="corner-blob-wrapper"><img src="../images/621dfcd10187caf50f94dcc7_section_blob4.svg" loading="lazy" width="17" alt="" class="corner-blob nav-link-blob">
+                <a href="mailto:StephenG753@Gmail.com?subject=Tutoring%20Support" class="nav-link">Email Us</a>
+              </div>
+              <div class="corner-blob-wrapper"><img src="../images/621dfcd10187caf50f94dcc7_section_blob4.svg" loading="lazy" width="17" alt="" class="corner-blob nav-link-blob">
+                <a href="https://g.page/r/Cd7PO15x5k54EBM/review" target="_blank" class="nav-link">Google Reviews</a>
+              </div>
+            </div>
+            <div class="social-links">
+              <div class="corner-blob-wrapper"><img src="../images/621dfcd10187caf50f94dcc7_section_blob4.svg" loading="lazy" width="17" alt="" class="corner-blob nav-link-blob">
+                <a href="https://www.facebook.com/people/CrossRoads-Tutoring/61557481097387/" target="_blank" class="nav-link">Facebook</a>
+              </div>
+              <div class="corner-blob-wrapper"><img src="../images/621dfcd10187caf50f94dcc7_section_blob4.svg" loading="lazy" width="17" alt="" class="corner-blob nav-link-blob">
+                <a href="https://www.instagram.com/crossroads_tutoring/" target="_blank" class="nav-link">Instagram</a>
+              </div>
+              <div class="corner-blob-wrapper"><img src="../images/621dfcd10187caf50f94dcc7_section_blob4.svg" loading="lazy" width="17" alt="" class="corner-blob nav-link-blob">
+                <a href="https://www.linkedin.com/company/crossroads-tutoring/" target="_blank" class="nav-link">LinkedIn</a>
+              </div>
+              <div class="corner-blob-wrapper"><img src="../images/621dfcd10187caf50f94dcc7_section_blob4.svg" loading="lazy" width="17" alt="" class="corner-blob nav-link-blob">
+                <a href="https://nextdoor.com/pages/crossroads-tutoring-san-diego-ca-2/" target="_blank" class="nav-link">NextDoor</a>
+              </div>
+            </div>
+          </div>
+          <div class="other-links">
+            <div class="corner-blob-wrapper"><img src="../images/621dfcd10187caf50f94dcc7_section_blob4.svg" loading="lazy" width="17" alt="" class="corner-blob nav-link-blob">
+              <a href="https://StephenG753.com" target="_blank" class="nav-link">Get to Know Stephen</a>
+            </div>
+            <div class="corner-blob-wrapper"><img src="../images/621dfcd10187caf50f94dcc7_section_blob4.svg" loading="lazy" width="17" alt="" class="corner-blob nav-link-blob">
+              <a href="../images/CrossRoads-Flyer---2024-2.png" target="_blank" class="nav-link">Download our Flyer</a>
+            </div>
+            <div class="corner-blob-wrapper hide"><img src="../images/621dfcd10187caf50f94dcc7_section_blob4.svg" loading="lazy" width="17" alt="" class="corner-blob nav-link-blob">
+              <a href="#" class="nav-link">Download our Business Card</a>
+            </div>
+            <div class="corner-blob-wrapper"><img src="../images/621dfcd10187caf50f94dcc7_section_blob4.svg" loading="lazy" width="17" alt="" class="corner-blob nav-link-blob">
+              <a href="index.html" class="nav-link" target="_blank">Study Guides</a>
+            </div>
+          </div>
+        </div>
+        <div class="credit-links width-100">
+          <div class="corner-blob-wrapper"><img src="../images/621dfcd10187caf50f94dcc7_section_blob4.svg" loading="lazy" width="17" alt="" class="corner-blob nav-link-blob">
+            <a href="https://webflow.com/" target="_blank" class="nav-link">Powered by <strong>Webflow</strong></a>
+          </div>
+          <div class="corner-blob-wrapper"><img src="../images/621dfcd10187caf50f94dcc7_section_blob4.svg" loading="lazy" width="17" alt="" class="corner-blob nav-link-blob">
+            <a href="https://StephenG753.com" target="_blank" class="nav-link">Created by <strong>Stephen Giang</strong></a>
+          </div>
+          <div class="corner-blob-wrapper"><img src="../images/621dfcd10187caf50f94dcc7_section_blob4.svg" loading="lazy" width="17" alt="" class="corner-blob nav-link-blob">
+            <a href="../terms-and-conditions.html" target="_blank" class="nav-link">Terms and Conditions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=66179c84f475267268556989" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="../js/webflow.js" type="text/javascript"></script>
+</body>
+</html>
