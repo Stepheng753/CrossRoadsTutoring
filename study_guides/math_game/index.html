@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <title>Math Hero Training | CrossRoads Tutoring</title>
+  <meta content="An 8-bit superhero math game: multiplication, fractions and calculus limits." name="description">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600;700&family=Press+Start+2P&display=swap">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="stylesheet" href="game.css">
+  <link href="../../images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="../../images/webclip.png" rel="apple-touch-icon">
+</head>
+<body class="game-body">
+
+  <header class="site-nav" id="siteNav">
+    <div class="site-nav__bar">
+      <a class="site-nav__brand" href="../../index.html" aria-label="CrossRoads Tutoring home"><img src="../../images/crossroads-icon-only-1.svg" width="52" height="54" alt="CrossRoads Tutoring"></a>
+      <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <nav class="site-nav__menu" id="navMenu" aria-label="Main">
+        <a class="nav-link" href="../../index.html#Home">Home</a>
+        <a class="nav-link" href="../../index.html#Team">Team</a>
+        <a class="nav-link" href="../../index.html#Subjects">Subjects</a>
+        <a class="nav-link" href="../../index.html#Contact">Contact</a>
+        <a class="button" href="tel:18582165827">Call Us At 858-216-5827</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="game">
+    <h1 class="game-title">Math Hero Training</h1>
+
+    <section class="arena" id="arena" aria-label="Battle">
+      <div class="hp-top">
+        <div class="hpside"><span class="hplabel">HERO</span><div class="hpbar big"><div id="hHp"></div><span id="hpText">10/10</span></div></div>
+        <div class="hpside foe-side"><span class="hplabel" id="eName2">ENEMY</span><div class="hpbar big"><div id="eHp"></div></div></div>
+      </div>
+      <div class="arena-stats">
+        <div><span class="hud-label">STREAK</span><b id="streak">0</b></div>
+        <div><span class="hud-label">BEST</span><b id="best">0</b></div>
+        <div><span class="hud-label">SCORE</span><b id="score">0.00</b></div>
+        <div><span class="hud-label">TIME</span><b id="timer">0:00</b></div>
+        <label class="namebox"><span class="hud-label">HERO NAME</span><input id="name" type="text" maxlength="40" placeholder="Your name"></label>
+      </div>
+      <div class="fighter"><div class="sprite" id="aHero"></div><div class="fname" id="heroName">HERO</div></div>
+      <div class="vs">VS</div>
+      <div class="slash" id="slash"></div>
+      <div class="fighter foe"><div class="sprite" id="aEnemy"></div><div class="fname" id="eName"></div></div>
+    </section>
+
+
+    <nav class="tabs" role="tablist" aria-label="Mission">
+      <button class="tab" role="tab" data-tab="mult">1 &bull; Multiply<span class="tab-score">0.00</span></button>
+      <button class="tab" role="tab" data-tab="frac">2 &bull; Fractions<span class="tab-score">0.00</span></button>
+      <button class="tab" role="tab" data-tab="lim">3 &bull; Limits<span class="tab-score">0.00</span></button>
+    </nav>
+
+    <section class="stage" id="stage"></section>
+
+    <div class="actions">
+      <button class="btn" id="export" type="button">Export report (print / PDF)</button>
+      <button class="btn ghost" id="music" type="button" aria-pressed="true">Music: ON</button>
+      <button class="btn ghost" id="reset" type="button">New game</button>
+    </div>
+  </main>
+
+  <section class="report" id="report" aria-hidden="true"></section>
+  <audio id="bgm" src="audio/battle.ogg" loop preload="auto"></audio>
+  <div id="fx" aria-hidden="true"></div>
+
+  <script src="../../js/main.js" defer></script>
+  <script src="game.js" defer></script>
+</body>
+</html>
