@@ -66,49 +66,10 @@
     return genMult();
   }
 
-  /* ---------- limits bank ---------- */
-  function lim(sub, body) {
-    return '<div class="lim"><span class="limword">lim<sub>' + sub + '</sub></span><span class="expr">' + body + '</span></div>';
-  }
-  function cases(rows) {
-    return '<div class="cases">' + rows.map(function (r) { return '<div>' + r[0] + '<span class="cond">' + r[1] + '</span></div>'; }).join('') + '</div>';
-  }
-  var LEFT = function (c) { return 'from the left (x→' + c + '⁻)'; };
-  var RIGHT = function (c) { return 'from the right (x→' + c + '⁺)'; };
-  var ONE = [['Limit']];
-
-  var LIMITS = [
-    // plug-in / factor-and-cancel
-    { type: 'Plug it in', html: lim('x→3', 'x<sup>2</sup> − 2x + 1'), text: 'lim x→3 (x^2 - 2x + 1)', labels: ['Limit'], answers: ['4'] },
-    { type: 'Factor & cancel', html: lim('x→2', F('x<sup>2</sup> − 4', 'x − 2')), text: 'lim x→2 (x^2 - 4)/(x - 2)', labels: ['Limit'], answers: ['4'] },
-    { type: 'Factor & cancel', html: lim('x→−1', F('x<sup>2</sup> + 3x + 2', 'x + 1')), text: 'lim x→-1 (x^2 + 3x + 2)/(x + 1)', labels: ['Limit'], answers: ['1'] },
-    { type: 'Factor & cancel', html: lim('x→0', F('3x<sup>2</sup> + 5x', 'x')), text: 'lim x→0 (3x^2 + 5x)/x', labels: ['Limit'], answers: ['5'] },
-    { type: 'Factor & cancel', html: lim('x→4', F('x − 4', 'x<sup>2</sup> − 16')), text: 'lim x→4 (x - 4)/(x^2 - 16)', labels: ['Limit'], answers: ['1/8'] },
-    { type: 'Plug it in', html: lim('x→1', F('x + 3', '2x + 4')), text: 'lim x→1 (x + 3)/(2x + 4)', labels: ['Limit'], answers: ['2/3'] },
-    { type: 'Plug it in', html: lim('x→5', S('x + 4')), text: 'lim x→5 sqrt(x + 4)', labels: ['Limit'], answers: ['3'] },
-    // vertical asymptotes
-    { type: 'Vertical asymptote', html: lim('x→2', F('1', 'x − 2')), text: 'lim x→2 1/(x - 2)', labels: [LEFT(2), RIGHT(2), 'overall limit'], answers: ['-INF', 'INF', 'DNE'] },
-    { type: 'Vertical asymptote', html: lim('x→3', F('1', '(x − 3)<sup>2</sup>')), text: 'lim x→3 1/(x - 3)^2', labels: ['Limit'], answers: ['INF'] },
-    { type: 'Vertical asymptote', html: lim('x→−1', F('x', '(x + 1)<sup>2</sup>')), text: 'lim x→-1 x/(x + 1)^2', labels: ['Limit'], answers: ['-INF'] },
-    { type: 'Vertical asymptote', html: lim('x→1', F('x + 2', 'x − 1')), text: 'lim x→1 (x + 2)/(x - 1)', labels: [LEFT(1), RIGHT(1), 'overall limit'], answers: ['-INF', 'INF', 'DNE'] },
-    // piecewise
-    { type: 'Piecewise', html: 'f(x) = ' + cases([['x + 1', 'if x &lt; 2'], ['x<sup>2</sup> − 1', 'if x ≥ 2']]) + lim('x→2', 'f(x)'),
-      text: 'f(x) = x+1 if x<2; x^2-1 if x>=2. lim x→2 f(x)', labels: [LEFT(2), RIGHT(2), 'overall limit'], answers: ['3', '3', '3'] },
-    { type: 'Piecewise', html: 'f(x) = ' + cases([['2x', 'if x &lt; 1'], ['5 − x', 'if x ≥ 1']]) + lim('x→1', 'f(x)'),
-      text: 'f(x) = 2x if x<1; 5-x if x>=1. lim x→1 f(x)', labels: [LEFT(1), RIGHT(1), 'overall limit'], answers: ['2', '4', 'DNE'] },
-    { type: 'Piecewise', html: 'f(x) = ' + cases([['x<sup>2</sup>', 'if x ≤ −1'], ['3x + 4', 'if x &gt; −1']]) + lim('x→−1', 'f(x)'),
-      text: 'f(x) = x^2 if x<=-1; 3x+4 if x>-1. lim x→-1 f(x)', labels: [LEFT(-1), RIGHT(-1), 'overall limit'], answers: ['1', '1', '1'] },
-    { type: 'Piecewise', html: lim('x→0', F('|x|', 'x')), text: 'lim x→0 |x|/x', labels: [LEFT(0), RIGHT(0), 'overall limit'], answers: ['-1', '1', 'DNE'] },
-    // horizontal asymptotes
-    { type: 'Horizontal asymptote', html: lim('x→+∞', F('3x<sup>2</sup> + 1', 'x<sup>2</sup> − 5')), text: 'lim x→inf (3x^2 + 1)/(x^2 - 5)', labels: ['Limit'], answers: ['3'] },
-    { type: 'Horizontal asymptote', html: lim('x→+∞', F('2x + 1', 'x<sup>2</sup> + 3')), text: 'lim x→inf (2x + 1)/(x^2 + 3)', labels: ['Limit'], answers: ['0'] },
-    { type: 'Horizontal asymptote', html: lim('x→±∞', F('x<sup>3</sup> + 1', 'x<sup>2</sup> + 1')), text: 'lim x→±inf (x^3 + 1)/(x^2 + 1)', labels: ['x→+∞', 'x→−∞'], answers: ['INF', '-INF'] },
-    { type: 'Double HA', html: lim('x→±∞', F(S('4x<sup>2</sup> + 1'), 'x + 3')), text: 'lim x→±inf sqrt(4x^2 + 1)/(x + 3)', labels: ['x→+∞', 'x→−∞'], answers: ['2', '-2'] },
-    { type: 'Double HA', html: lim('x→±∞', F('3x', S('x<sup>2</sup> + 4'))), text: 'lim x→±inf 3x/sqrt(x^2 + 4)', labels: ['x→+∞', 'x→−∞'], answers: ['3', '-3'] }
-  ];
-
-  function limItem(i) {
-    var q = LIMITS[i];
+  /* ---------- limits bank (5 sets of 20, see limits.js) ---------- */
+  var SETS = window.LIMIT_SETS;
+  function limItem(set, i) {
+    var q = SETS[set][i];
     return { kind: 'lim', id: i + 1, type: q.type, html: q.html, text: q.text, labels: q.labels, answers: q.answers };
   }
 
@@ -116,10 +77,14 @@
   var SECTIONS = { mult: 'Multiplication', frac: 'Fractions', lim: 'Limits' };
   var state;
 
-  function fresh() {
-    var s = { name: '', elapsed: 0, lives: LIVES_MAX, refills: 0, streak: 0, best: 0, tab: 'mult',
+  function pickSet(avoid) {
+    var n; do { n = Math.floor(Math.random() * SETS.length); } while (SETS.length > 1 && n === avoid);
+    return n;
+  }
+  function fresh(avoidSet) {
+    var s = { name: '', elapsed: 0, lives: LIVES_MAX, over: false, lset: pickSet(avoidSet), streak: 0, best: 0, tab: 'mult',
       sec: { mult: { items: [], cur: 0, start: 0 }, frac: { items: [], cur: 0, start: 0 }, lim: { items: [], cur: 0, start: 0 } } };
-    for (var i = 0; i < ROUND; i++) { s.sec.mult.items.push(genMult()); s.sec.frac.items.push(genFrac()); s.sec.lim.items.push(limItem(i)); }
+    for (var i = 0; i < ROUND; i++) { s.sec.mult.items.push(genMult()); s.sec.frac.items.push(genFrac()); s.sec.lim.items.push(limItem(s.lset, i)); }
     return s;
   }
   function save() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) { /* ignore */ } }
@@ -298,13 +263,13 @@
       $('msg').textContent = n === 1 ? 'First try! Full point.' : 'Got it on try ' + n + ' — worth 1/' + n + ' point.';
     } else {
       state.streak = 0; state.lives--;
-      var refill = state.lives <= 0;
-      if (refill) { state.lives = LIVES_MAX; state.refills++; }
+      var lost = state.lives <= 0;
+      if (lost) { state.lives = 0; state.over = true; }
       save(); render(); burst('OOF!', 'bad');
       playAnim('aEnemy', 'atk', 900);
       setTimeout(function () { playAnim('slash', 'go', 350); playAnim('aHero', 'hit', 600); }, 430);
       $('msg').textContent = hints.length ? hints.join(' ') : 'Not quite — try again!';
-      if (refill) refillAnim();
+      if (lost) setTimeout(gameOver, 1000);
     }
   }
 
@@ -315,12 +280,29 @@
     $('msg').textContent = 'Answer: ' + it.answers.join(' | ') + '. No points — shake it off, hero!';
   }
 
-  function refillAnim() {
+  function gameOver() {
+    if ($('gameover')) return;
+    $('aHero').classList.add('down');
     var el = document.createElement('div');
-    el.className = 'refill';
-    el.innerHTML = '<div class="refill-box">' + pixels(HERO, HERO_PAL, 8) + '<h2>POWER UP!</h2><p>HP restored to ' + LIVES_MAX + '</p></div>';
-    fx.appendChild(el); document.body.classList.add('refilling');
-    setTimeout(function () { el.remove(); document.body.classList.remove('refilling'); }, 2200);
+    el.id = 'gameover'; el.className = 'gameover';
+    el.innerHTML = '<div class="go-box"><h2>GAME OVER</h2><p>Your hero ran out of HP.</p>' +
+      '<p>Final score: <b>' + totalScore().toFixed(2) + '</b> &nbsp; Time: <b>' + fmtTime(state.elapsed) + '</b></p>' +
+      '<div class="row"><button class="btn" id="goPrint" type="button">Print report</button>' +
+      '<button class="btn ghost" id="goNew" type="button">Start new game</button></div></div>';
+    document.body.appendChild(el);
+    $('goPrint').onclick = function () { buildReport(); window.print(); };
+    $('goNew').onclick = newGame;
+    $('goPrint').focus();
+  }
+
+  function newGame() {
+    var nm = state.name, old = state.lset;
+    state = fresh(old); state.name = nm; save();
+    var go = $('gameover'); if (go) go.remove();
+    $('aHero').classList.remove('down');
+    arenaItem = null; pendingItem = null;
+    $('name').value = nm;
+    render();
   }
 
   /* ---------- report ---------- */
@@ -328,7 +310,7 @@
     var h = '<h1>Math Hero Training — Report</h1>' +
       '<p><b>Student:</b> ' + esc(state.name || '________________') + ' &nbsp; <b>Report generated:</b> ' + stamp(Date.now(), true) + '</p>' +
       '<p><b>Total play time (duration):</b> ' + fmtDur(state.elapsed) + ' (' + fmtTime(state.elapsed) + ')</p>' +
-      '<p><b>Total score:</b> ' + totalScore().toFixed(2) + ' &nbsp; <b>Best streak:</b> ' + state.best + ' &nbsp; <b>Lives refills:</b> ' + state.refills + '</p>' +
+      '<p><b>Total score:</b> ' + totalScore().toFixed(2) + ' &nbsp; <b>Best streak:</b> ' + state.best + ' &nbsp; <b>Limits set:</b> ' + (state.lset + 1) + ' of ' + SETS.length + ' &nbsp; <b>Result:</b> ' + (state.over ? 'GAME OVER (HP reached 0)' : 'In progress') + '</p>' +
       '<p class="note">Scoring: solved on attempt n = 1/n point. Unsolved or given-up = 0.</p>';
     Object.keys(SECTIONS).forEach(function (k) {
       var items = state.sec[k].items.filter(function (it) { return it.attempts && it.attempts.length || it.done; });
@@ -353,12 +335,12 @@
   nameEl.oninput = function () { state.name = nameEl.value; showName(); save(); };
   document.querySelectorAll('.tab').forEach(function (b) { b.onclick = function () { state.tab = b.getAttribute('data-tab'); save(); render(); }; });
   $('export').onclick = function () { buildReport(); window.print(); };
-  $('reset').onclick = function () { if (confirm('Start a brand new game? This erases the current report.')) { var nm = state.name; state = fresh(); state.name = nm; save(); render(); } };
+  $('reset').onclick = function () { if (confirm('Start a brand new game? This erases the current report.')) newGame(); };
   window.addEventListener('beforeprint', buildReport);
   $('aHero').innerHTML = pixels(HERO, HERO_PAL, 7);
 
   setInterval(function () {
-    if (document.hidden) return;
+    if (document.hidden || state.over) return;
     state.elapsed++;
     var it = state.sec[state.tab].items[state.sec[state.tab].cur];
     if (it && !it.done) it.time = (it.time || 0) + 1;
@@ -381,7 +363,8 @@
   $('music').textContent = 'Music: ' + (musicOn ? 'ON' : 'OFF');
 
   render();
+  if (state.over) gameOver();
 
   // expose for dev testing in the console / node
-  window.MathHero = { check: check, parse: parse, genFrac: genFrac, genMult: genMult, LIMITS: LIMITS, gcd: gcd };
+  window.MathHero = { check: check, parse: parse, genFrac: genFrac, genMult: genMult, LIMIT_SETS: SETS, gcd: gcd };
 })();
